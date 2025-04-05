@@ -12,7 +12,7 @@ const API_URL = "https://fakestoreapi.com/products"
 
 const Product = () => {
 
- 
+  const navigate = useNavigate();
 
   const[products, setProducts] = useState([])
   const [render, setRender] = useState(false);
