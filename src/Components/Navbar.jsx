@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
+
+
+
+
+
+
+
+
+
+
 const Navbar = () => {
+
+    const [username, setUsername] = useState('');
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (storedUser) {
+      setUsername(storedUser.username);
+    }
+  }, []);
+  
+    
   return (
+
     
     <div className='bg-gray-200 shadow-sm'>
    
@@ -32,9 +54,22 @@ const Navbar = () => {
                         <Link to="/product" className='border-blue-500 text-gray-900 inline flex place-items-center justify-center px-1 pt-3 border-b-2 text-sm font-medium hover:bg-[#f7aa35] hover:rounded-2xl'>👕Product</Link>
                         <Link to="/cartmember" className='border-blue-500 text-gray-900 inline flex place-items-center justify-center px-1 pt-3 border-b-2 text-sm font-medium hover:bg-[#f7aa35] hover:rounded-2xl'>🛒Cart</Link>
 
+
+
                       
 
                          <Link to="/" className='border-blue-500 text-gray-900 inline flex place-items-center justify-center px-1 pt-3 border-b-2 text-sm font-medium hover:bg-[#f7aa35] hover:rounded-2xl'>🚪 Log Out</Link>
+
+                         <div to="/" className='border-blue-500 text-gray-900 inline flex place-items-center justify-center px-1 pt-3 '>💆
+
+
+                         
+                         
+                         </div>
+
+
+
+                         
 
                          
 

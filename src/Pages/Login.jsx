@@ -26,6 +26,7 @@ const Login = () => {
   
         if (foundUser) {
           console.log('Login berhasil sebagai user:', foundUser);
+          localStorage.setItem('loggedInUser', JSON.stringify(foundUser));
           navigate('/about'); // Redirect ke home jika cocok
         } else {
           alert('Username atau password salah.');
