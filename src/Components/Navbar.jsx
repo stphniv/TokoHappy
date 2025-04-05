@@ -35,6 +35,12 @@ const Navbar = () => {
                       
 
                          <Link to="/" className='border-blue-500 text-gray-900 inline flex place-items-center justify-center px-1 pt-3 border-b-2 text-sm font-medium hover:bg-[#f7aa35] hover:rounded-2xl'>🚪 Log Out</Link>
+
+                         
+
+
+
+
                 </div>
             </div>
         </div>
